@@ -1,12 +1,12 @@
-@prefix : <http://purl.org/ontoledgy/ontoledgy/mro/merged-avco-mco#> .
+@prefix : <http://purl.org/ontoledgy/mro/merged-avco-mco#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/ontoledgy/ontoledgy/mro/merged-avco-mco> .
+@base <http://purl.org/ontoledgy/mro/merged-avco-mco> .
 
-<http://purl.org/ontoledgy/ontoledgy/mro/merged-avco-mco> rdf:type owl:Ontology ;
+<http://purl.org/ontoledgy/mro/merged-avco-mco> rdf:type owl:Ontology ;
                                                            owl:imports <http://purl.oclc.org/NET/mvco.owl> ;
                                                            <http://purl.org/dc/elements/1.1/title> "Media Contract Ontology -  Core"^^xsd:string ;
                                                            rdfs:comment "AuMVCO. Media Value Chain Ontology Audio Extension"@en .
