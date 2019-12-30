@@ -1,0 +1,32 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "urn:mpeg:mpeg21:mco:core:2015#Present" "urn:mpeg:mpeg21:mco:core:2015#ActionEventFact" "urn:mpeg:mpeg21:mco:core:2015#Event" "urn:mpeg:mpeg21:mco:core:2015#Authenticate" "urn:mpeg:mpeg21:mco:core:2015#Post" "urn:mpeg:mpeg21:mco:core:2015#Store" "urn:mpeg:mpeg21:mco:core:2015#Consume" "urn:mpeg:mpeg21:mco:core:2015#Describe" "urn:mpeg:mpeg21:mco:core:2015#FactIntersection" "http://purl.oclc.org/NET/mvco.owl#Fact" "urn:mpeg:mpeg21:mco:core:2015#Deliver" "http://purl.oclc.org/NET/aumvco.owl#Segment" "urn:mpeg:mpeg21:mco:core:2015#FactNegation" "urn:mpeg:mpeg21:mco:core:2015#Process" "urn:mpeg:mpeg21:mco:core:2015#FactComposition" "urn:mpeg:mpeg21:mco:core:2015#TogetherWith" "urn:mpeg:mpeg21:mco:core:2015#Match" "urn:mpeg:mpeg21:mco:core:2015#Service" "http://purl.oclc.org/NET/mvco.owl#Action" "urn:mpeg:mpeg21:mco:core:2015#FactUnion" "http://purl.oclc.org/NET/aumvco.owl#Reuse" "urn:mpeg:mpeg21:mco:core:2015#Verify" "urn:mpeg:mpeg21:mco:core:2015#Done" "urn:mpeg:mpeg21:mco:core:2015#Provide" "urn:mpeg:mpeg21:mco:core:2015#GenericAction" "urn:mpeg:mpeg21:mco:core:2015#Identify" "urn:mpeg:mpeg21:mco:core:2015#InteractWith" "http://purl.oclc.org/NET/mvco.owl#IPEntity" "urn:mpeg:mpeg21:mco:core:2015#Started" "urn:mpeg:mpeg21:mco:core:2015#Package" ; /*classes style*/
+	"urn:mpeg:mpeg21:mco:core:2015#Match" -> "http://purl.oclc.org/NET/mvco.owl#Action" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Describe" -> "urn:mpeg:mpeg21:mco:core:2015#Service" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#FactIntersection" -> "urn:mpeg:mpeg21:mco:core:2015#FactComposition" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Package" -> "urn:mpeg:mpeg21:mco:core:2015#Service" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Done" -> "urn:mpeg:mpeg21:mco:core:2015#ActionEventFact" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Deliver" -> "urn:mpeg:mpeg21:mco:core:2015#Service" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Verify" -> "urn:mpeg:mpeg21:mco:core:2015#Service" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Authenticate" -> "urn:mpeg:mpeg21:mco:core:2015#Service" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#InteractWith" -> "urn:mpeg:mpeg21:mco:core:2015#Service" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Store" -> "urn:mpeg:mpeg21:mco:core:2015#Service" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Provide" -> "http://purl.oclc.org/NET/mvco.owl#Action" [ label = "rdfs:subClassOf" ];
+	"http://purl.oclc.org/NET/aumvco.owl#Segment" -> "http://purl.oclc.org/NET/mvco.owl#IPEntity" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Process" -> "urn:mpeg:mpeg21:mco:core:2015#Service" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Started" -> "urn:mpeg:mpeg21:mco:core:2015#ActionEventFact" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Identify" -> "urn:mpeg:mpeg21:mco:core:2015#Service" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Post" -> "urn:mpeg:mpeg21:mco:core:2015#Service" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#TogetherWith" -> "http://purl.oclc.org/NET/mvco.owl#Fact" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#FactNegation" -> "urn:mpeg:mpeg21:mco:core:2015#FactComposition" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Event" -> "http://purl.oclc.org/NET/mvco.owl#IPEntity" [ label = "rdfs:subClassOf" ];
+	"http://purl.oclc.org/NET/aumvco.owl#Reuse" -> "http://purl.oclc.org/NET/mvco.owl#Action" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#FactUnion" -> "urn:mpeg:mpeg21:mco:core:2015#FactComposition" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Consume" -> "http://purl.oclc.org/NET/mvco.owl#Action" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#FactComposition" -> "http://purl.oclc.org/NET/mvco.owl#Fact" [ label = "rdfs:subClassOf" ];
+	"http://purl.oclc.org/NET/mvco.owl#Action" -> "urn:mpeg:mpeg21:mco:core:2015#GenericAction" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#Present" -> "urn:mpeg:mpeg21:mco:core:2015#Service" [ label = "rdfs:subClassOf" ];
+	"urn:mpeg:mpeg21:mco:core:2015#ActionEventFact" -> "http://purl.oclc.org/NET/mvco.owl#Fact" [ label = "rdfs:subClassOf" ];
+
+}

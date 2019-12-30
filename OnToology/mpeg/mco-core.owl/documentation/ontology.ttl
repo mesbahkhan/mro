@@ -1,0 +1,499 @@
+@prefix : <urn:mpeg:mpeg21:mco:core:2015#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:mpeg:mpeg21:mco:core:2015> .
+
+<urn:mpeg:mpeg21:mco:core:2015> rdf:type owl:Ontology ;
+                                 owl:versionIRI <urn:mpeg:mpeg21:mco:core:2015/2nd-edition> ;
+                                 owl:imports <http://purl.oclc.org/NET/mvco.owl> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.oclc.org/NET/mvco.owl#actedBy
+<http://purl.oclc.org/NET/mvco.owl#actedBy> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf :actedBy .
+
+
+###  http://purl.oclc.org/NET/mvco.owl#actedOver
+<http://purl.oclc.org/NET/mvco.owl#actedOver> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf :actedOver .
+
+
+###  http://purl.oclc.org/NET/mvco.owl#hasRequired
+<http://purl.oclc.org/NET/mvco.owl#hasRequired> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf :hasRequired .
+
+
+###  http://purl.oclc.org/NET/mvco.owl#issuedBy
+<http://purl.oclc.org/NET/mvco.owl#issuedBy> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf :issuedBy .
+
+
+###  http://purl.oclc.org/NET/mvco.owl#permitsAction
+<http://purl.oclc.org/NET/mvco.owl#permitsAction> rdfs:subPropertyOf :permitsAction .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdf:type owl:ObjectProperty .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#actedBy
+:actedBy rdf:type owl:ObjectProperty ;
+         rdfs:domain :GenericAction ;
+         rdfs:range :Party .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#actedOver
+:actedOver rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://purl.oclc.org/NET/mvco.owl#Action> ;
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( <http://purl.oclc.org/NET/mvco.owl#IPEntity>
+                                      :Service
+                                    )
+                      ] .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#appliesOver
+:appliesOver rdf:type owl:ObjectProperty ;
+             owl:propertyChainAxiom ( :permitsAction
+                                      :actedOver
+                                    ) .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#cancels
+:cancels rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :contractObjectProperty .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#contractObjectProperty
+:contractObjectProperty rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Contract ;
+                        rdfs:range :Contract .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#factObjectProperty
+:factObjectProperty rdf:type owl:ObjectProperty .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#forbidsAction
+:forbidsAction rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :Prohibition ;
+               rdfs:range <http://purl.oclc.org/NET/mvco.owl#Action> .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#hasFact
+:hasFact rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :factObjectProperty ;
+         rdfs:domain :FactComposition ;
+         rdfs:range <http://purl.oclc.org/NET/mvco.owl#Fact> .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#hasParty
+:hasParty rdf:type owl:ObjectProperty ;
+          rdfs:domain :Contract ;
+          rdfs:range :Party .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#hasRecipient
+:hasRecipient rdf:type owl:ObjectProperty ;
+              rdfs:domain :Provide ;
+              rdfs:range :Party .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#hasRequired
+:hasRequired rdf:type owl:ObjectProperty ;
+             rdfs:domain :DeonticExpression ;
+             rdfs:range <http://purl.oclc.org/NET/mvco.owl#Fact> .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#hasSignatory
+:hasSignatory rdf:type owl:ObjectProperty ;
+              rdfs:domain :Organization ;
+              rdfs:range <http://purl.oclc.org/NET/mvco.owl#User> .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#hasVCard
+:hasVCard rdf:type owl:ObjectProperty ;
+          rdfs:domain :Party ;
+          rdfs:range <http://www.w3.org/2006/vcard/ns#VCard> .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#implements
+:implements rdf:type owl:ObjectProperty ;
+            rdfs:domain :DeonticExpression ;
+            rdfs:range :TextualClause .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#isAmendmentOf
+:isAmendmentOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :contractObjectProperty .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#isHeldBy
+:isHeldBy rdf:type owl:ObjectProperty ;
+          owl:propertyChainAxiom ( :permitsAction
+                                   :actedBy
+                                 ) .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#isSignedBy
+:isSignedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :Contract ;
+            rdfs:range <http://purl.oclc.org/NET/mvco.owl#User> ;
+            rdfs:comment "relation used to identify the signatory of a contract when different from a party"@en .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#issuedBy
+:issuedBy rdf:type owl:ObjectProperty ;
+          rdfs:domain :DeonticExpression ;
+          rdfs:range :Party .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#issuedIn
+:issuedIn rdf:type owl:ObjectProperty ;
+          rdfs:domain :DeonticExpression ;
+          rdfs:range :Contract .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#makesTrue
+:makesTrue rdf:type owl:ObjectProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Event
+                                       :GenericAction
+                                     )
+                       ] ;
+           rdfs:range :ActionEventFact .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#obligatesAction
+:obligatesAction rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain :Obligation ;
+                 rdfs:range :GenericAction .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#permitsAction
+:permitsAction rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://purl.oclc.org/NET/mvco.owl#Permission> ;
+               rdfs:range :GenericAction .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#prevailsOver
+:prevailsOver rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :contractObjectProperty .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#supersedes
+:supersedes rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :contractObjectProperty .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#withIPEntity
+:withIPEntity rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :factObjectProperty ;
+              rdfs:domain :TogetherWith ;
+              rdfs:range <http://purl.oclc.org/NET/mvco.owl#IPEntity> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdf:type owl:DatatypeProperty .
+
+
+###  urn:mpeg:mpeg21:2002:01-DII-NS#Identifier
+<urn:mpeg:mpeg21:2002:01-DII-NS#Identifier> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://purl.oclc.org/NET/mvco.owl#IPEntity> ;
+                                            rdfs:range xsd:string .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Address
+:Address rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Party ;
+         rdfs:range xsd:string .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Signature
+:Signature rdf:type owl:DatatypeProperty ;
+           rdfs:domain <http://purl.oclc.org/NET/mvco.owl#User> ;
+           rdfs:range rdf:XMLLiteral .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Text
+:Text rdf:type owl:DatatypeProperty ;
+      rdfs:domain :TextualClause ;
+      rdfs:range rdfs:Literal .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#TextVersion
+:TextVersion rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :contractProperty ;
+             rdfs:domain :Contract ;
+             rdfs:range rdfs:Literal .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#contractProperty
+:contractProperty rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Contract .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#deonticProperty
+:deonticProperty rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#encryptedContractPart
+:encryptedContractPart rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Contract ;
+                       rdfs:range rdf:XMLLiteral .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#factProperty
+:factProperty rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#hasCourt
+:hasCourt rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :contractProperty ;
+          rdfs:domain :Contract ;
+          rdfs:range rdfs:Literal .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#hasGoverningLaw
+:hasGoverningLaw rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :contractProperty ;
+                 rdfs:domain :Contract ;
+                 rdfs:range rdfs:Literal .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#isCourtJurisdictionExclusive
+:isCourtJurisdictionExclusive rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf :contractProperty ;
+                              rdfs:domain :Contract ;
+                              rdfs:range xsd:boolean .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#isOnLoan
+:isOnLoan rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Provide ;
+          rdfs:range xsd:boolean .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#withIPEntitiesFrom
+:withIPEntitiesFrom rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :factProperty ;
+                    rdfs:domain :TogetherWith ;
+                    rdfs:range rdfs:Literal .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.oclc.org/NET/mvco.owl#Action
+<http://purl.oclc.org/NET/mvco.owl#Action> rdf:type owl:Class ;
+                                           rdfs:subClassOf :GenericAction .
+
+
+###  http://purl.oclc.org/NET/mvco.owl#Fact
+<http://purl.oclc.org/NET/mvco.owl#Fact> rdf:type owl:Class ;
+                                         rdfs:comment "" .
+
+
+###  http://purl.oclc.org/NET/mvco.owl#IPEntity
+<http://purl.oclc.org/NET/mvco.owl#IPEntity> rdf:type owl:Class .
+
+
+###  http://purl.oclc.org/NET/mvco.owl#Permission
+<http://purl.oclc.org/NET/mvco.owl#Permission> rdf:type owl:Class .
+
+
+###  http://purl.oclc.org/NET/mvco.owl#User
+<http://purl.oclc.org/NET/mvco.owl#User> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/vcard/ns#VCard
+<http://www.w3.org/2006/vcard/ns#VCard> rdf:type owl:Class .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#ActionEventFact
+:ActionEventFact rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.oclc.org/NET/mvco.owl#Fact> .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Authenticate
+:Authenticate rdf:type owl:Class ;
+              rdfs:subClassOf :Service .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Consume
+:Consume rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.oclc.org/NET/mvco.owl#Action> .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Contract
+:Contract rdf:type owl:Class .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Deliver
+:Deliver rdf:type owl:Class ;
+         rdfs:subClassOf :Service .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#DeonticExpression
+:DeonticExpression rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Class ;
+                                         owl:unionOf ( <http://purl.oclc.org/NET/mvco.owl#Permission>
+                                                       :Obligation
+                                                       :Prohibition
+                                                     )
+                                       ] .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Describe
+:Describe rdf:type owl:Class ;
+          rdfs:subClassOf :Service .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Done
+:Done rdf:type owl:Class ;
+      rdfs:subClassOf :ActionEventFact .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf <http://purl.oclc.org/NET/mvco.owl#IPEntity> .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#FactComposition
+:FactComposition rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.oclc.org/NET/mvco.owl#Fact> .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#FactIntersection
+:FactIntersection rdf:type owl:Class ;
+                  rdfs:subClassOf :FactComposition .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#FactNegation
+:FactNegation rdf:type owl:Class ;
+              rdfs:subClassOf :FactComposition .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#FactUnion
+:FactUnion rdf:type owl:Class ;
+           rdfs:subClassOf :FactComposition .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#GenericAction
+:GenericAction rdf:type owl:Class .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Identify
+:Identify rdf:type owl:Class ;
+          rdfs:subClassOf :Service .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#InteractWith
+:InteractWith rdf:type owl:Class ;
+              rdfs:subClassOf :Service .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Match
+:Match rdf:type owl:Class ;
+       rdfs:subClassOf <http://purl.oclc.org/NET/mvco.owl#Action> .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Obligation
+:Obligation rdf:type owl:Class .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Organization
+:Organization rdf:type owl:Class .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Package
+:Package rdf:type owl:Class ;
+         rdfs:subClassOf :Service .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Party
+:Party rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Class ;
+                             owl:unionOf ( <http://purl.oclc.org/NET/mvco.owl#User>
+                                           :Organization
+                                         )
+                           ] .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Post
+:Post rdf:type owl:Class ;
+      rdfs:subClassOf :Service .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Present
+:Present rdf:type owl:Class ;
+         rdfs:subClassOf :Service .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Process
+:Process rdf:type owl:Class ;
+         rdfs:subClassOf :Service .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Prohibition
+:Prohibition rdf:type owl:Class .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Provide
+:Provide rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.oclc.org/NET/mvco.owl#Action> .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Service
+:Service rdf:type owl:Class .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Started
+:Started rdf:type owl:Class ;
+         rdfs:subClassOf :ActionEventFact .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Store
+:Store rdf:type owl:Class ;
+       rdfs:subClassOf :Service .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#TextualClause
+:TextualClause rdf:type owl:Class .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#TogetherWith
+:TogetherWith rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.oclc.org/NET/mvco.owl#Fact> .
+
+
+###  urn:mpeg:mpeg21:mco:core:2015#Verify
+:Verify rdf:type owl:Class ;
+        rdfs:subClassOf :Service .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  urn:mpeg:mpeg21:mco:core:2015
+<urn:mpeg:mpeg21:mco:core:2015> rdf:type owl:NamedIndividual ;
+                                <http://purl.org/dc/elements/1.1/title> "Media Contract Ontology -  Core" .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
