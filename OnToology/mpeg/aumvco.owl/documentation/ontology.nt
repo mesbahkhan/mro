@@ -1,0 +1,197 @@
+<http://purl.oclc.org/NET/aumvco.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.oclc.org/NET/aumvco.owl> <http://www.w3.org/2002/07/owl#imports> <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/aumvco.owl> <http://www.w3.org/2000/01/rdf-schema#comment> "AuMVCO. Media Value Chain Ontology Audio Extension"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#duration
+<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.oclc.org/NET/aumvco.owl#contains
+<http://purl.oclc.org/NET/aumvco.owl#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/aumvco.owl#Segment> .
+<http://purl.oclc.org/NET/aumvco.owl#contains> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.oclc.org/NET/mvco.owl#IPEntity> .
+<http://purl.oclc.org/NET/aumvco.owl#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies an IP entity contained in a Segment or Track." .
+<http://purl.oclc.org/NET/aumvco.owl#contains> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# http://purl.oclc.org/NET/aumvco.owl#hasSegment
+<http://purl.oclc.org/NET/aumvco.owl#hasSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#hasSegment> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.oclc.org/NET/aumvco.owl#segmentOf> .
+<http://purl.oclc.org/NET/aumvco.owl#hasSegment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/mvco.owl#IPEntity> .
+<http://purl.oclc.org/NET/aumvco.owl#hasSegment> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.oclc.org/NET/aumvco.owl#Segment> .
+<http://purl.oclc.org/NET/aumvco.owl#hasSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a Segment of an audio IP Entity." .
+<http://purl.oclc.org/NET/aumvco.owl#hasSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "testing" .
+# 
+# http://purl.oclc.org/NET/aumvco.owl#hasTrack
+<http://purl.oclc.org/NET/aumvco.owl#hasTrack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#hasTrack> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#hasTrack> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/mvco.owl#IPEntity> .
+<http://purl.oclc.org/NET/aumvco.owl#hasTrack> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.oclc.org/NET/aumvco.owl#Track> .
+<http://purl.oclc.org/NET/aumvco.owl#hasTrack> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifes a track of an audio multitrack IP entity." .
+<http://purl.oclc.org/NET/aumvco.owl#hasTrack> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# http://purl.oclc.org/NET/aumvco.owl#interval
+<http://purl.oclc.org/NET/aumvco.owl#interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#interval> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/mvco.owl#IPEntity> .
+<http://purl.oclc.org/NET/aumvco.owl#interval> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.oclc.org/NET/aumvco.owl#Interval> .
+<http://purl.oclc.org/NET/aumvco.owl#interval> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an IP Entity to an interval." .
+<http://purl.oclc.org/NET/aumvco.owl#interval> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# http://purl.oclc.org/NET/aumvco.owl#onTimeline
+<http://purl.oclc.org/NET/aumvco.owl#onTimeline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#onTimeline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#onTimeline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/aumvco.owl#Interval> .
+<http://purl.oclc.org/NET/aumvco.owl#onTimeline> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.oclc.org/NET/aumvco.owl#Timeline> .
+<http://purl.oclc.org/NET/aumvco.owl#onTimeline> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an interval to the corresponding timeline." .
+<http://purl.oclc.org/NET/aumvco.owl#onTimeline> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# http://purl.oclc.org/NET/aumvco.owl#onTrack
+<http://purl.oclc.org/NET/aumvco.owl#onTrack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#onTrack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#onTrack> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/aumvco.owl#Segment> .
+<http://purl.oclc.org/NET/aumvco.owl#onTrack> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.oclc.org/NET/aumvco.owl#Track> .
+# 
+# http://purl.oclc.org/NET/aumvco.owl#segmentOf
+<http://purl.oclc.org/NET/aumvco.owl#segmentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#segmentOf> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.oclc.org/NET/aumvco.owl#duration
+<http://purl.oclc.org/NET/aumvco.owl#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#duration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/aumvco.owl#Interval> .
+<http://purl.oclc.org/NET/aumvco.owl#duration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://purl.oclc.org/NET/aumvco.owl#duration> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the duration of a time interval." .
+<http://purl.oclc.org/NET/aumvco.owl#duration> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# http://purl.oclc.org/NET/aumvco.owl#end
+<http://purl.oclc.org/NET/aumvco.owl#end> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#end> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#end> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/aumvco.owl#Interval> .
+<http://purl.oclc.org/NET/aumvco.owl#end> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://purl.oclc.org/NET/aumvco.owl#end> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the beginning of a time interval." .
+<http://purl.oclc.org/NET/aumvco.owl#end> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# http://purl.oclc.org/NET/aumvco.owl#isAudio
+<http://purl.oclc.org/NET/aumvco.owl#isAudio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#isAudio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#isAudio> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/mvco.owl#IPEntity> .
+<http://purl.oclc.org/NET/aumvco.owl#isAudio> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://purl.oclc.org/NET/aumvco.owl#isAudio> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies an IP Entity in the audio domain." .
+<http://purl.oclc.org/NET/aumvco.owl#isAudio> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# http://purl.oclc.org/NET/aumvco.owl#start
+<http://purl.oclc.org/NET/aumvco.owl#start> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#start> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#start> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/aumvco.owl#Interval> .
+<http://purl.oclc.org/NET/aumvco.owl#start> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://purl.oclc.org/NET/aumvco.owl#start> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the beginning of a time interval." .
+<http://purl.oclc.org/NET/aumvco.owl#start> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# http://purl.oclc.org/NET/aumvco.owl#trackNumber
+<http://purl.oclc.org/NET/aumvco.owl#trackNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#trackNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.oclc.org/NET/aumvco.owl#trackNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/aumvco.owl#Track> .
+<http://purl.oclc.org/NET/aumvco.owl#trackNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://purl.oclc.org/NET/aumvco.owl#trackNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies an identifier for a track of a multi-track IP Entity." .
+<http://purl.oclc.org/NET/aumvco.owl#trackNumber> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.oclc.org/NET/aumvco.owl#Interval
+<http://purl.oclc.org/NET/aumvco.owl#Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/aumvco.owl#Interval> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/aumvco.owl#Timeline> .
+<http://purl.oclc.org/NET/aumvco.owl#Interval> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/aumvco.owl#Track> .
+<http://purl.oclc.org/NET/aumvco.owl#Interval> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#Action> .
+<http://purl.oclc.org/NET/aumvco.owl#Interval> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#Fact> .
+<http://purl.oclc.org/NET/aumvco.owl#Interval> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#IPEntity> .
+<http://purl.oclc.org/NET/aumvco.owl#Interval> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#Permission> .
+<http://purl.oclc.org/NET/aumvco.owl#Interval> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#UseData> .
+<http://purl.oclc.org/NET/aumvco.owl#Interval> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#User> .
+<http://purl.oclc.org/NET/aumvco.owl#Interval> <http://www.w3.org/2000/01/rdf-schema#comment> "A temporal entity defined by a start end end point." .
+<http://purl.oclc.org/NET/aumvco.owl#Interval> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# http://purl.oclc.org/NET/aumvco.owl#Reuse
+<http://purl.oclc.org/NET/aumvco.owl#Reuse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/aumvco.owl#Reuse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/mvco.owl#Action> .
+<http://purl.oclc.org/NET/aumvco.owl#Reuse> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#CreateWork> .
+<http://purl.oclc.org/NET/aumvco.owl#Reuse> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#Distribute> .
+<http://purl.oclc.org/NET/aumvco.owl#Reuse> <http://www.w3.org/2000/01/rdf-schema#comment> "The Action of using an IP Entity for the creation of a composite IP Entity" .
+<http://purl.oclc.org/NET/aumvco.owl#Reuse> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# http://purl.oclc.org/NET/aumvco.owl#Segment
+<http://purl.oclc.org/NET/aumvco.owl#Segment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/aumvco.owl#Segment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/mvco.owl#IPEntity> .
+<http://purl.oclc.org/NET/aumvco.owl#Segment> <http://www.w3.org/2000/01/rdf-schema#comment> "A specified part of a time-based IP Entity (a meronym of IP Entity)." .
+<http://purl.oclc.org/NET/aumvco.owl#Segment> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# http://purl.oclc.org/NET/aumvco.owl#Timeline
+<http://purl.oclc.org/NET/aumvco.owl#Timeline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/aumvco.owl#Timeline> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/aumvco.owl#Track> .
+<http://purl.oclc.org/NET/aumvco.owl#Timeline> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#Action> .
+<http://purl.oclc.org/NET/aumvco.owl#Timeline> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#IPEntity> .
+<http://purl.oclc.org/NET/aumvco.owl#Timeline> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#Permission> .
+<http://purl.oclc.org/NET/aumvco.owl#Timeline> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#UseData> .
+<http://purl.oclc.org/NET/aumvco.owl#Timeline> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#User> .
+<http://purl.oclc.org/NET/aumvco.owl#Timeline> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a linear and coherent piece of time - can be either abstract (such as the one behind a score) or concrete (such as a signal time line)." .
+<http://purl.oclc.org/NET/aumvco.owl#Timeline> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# http://purl.oclc.org/NET/aumvco.owl#Track
+<http://purl.oclc.org/NET/aumvco.owl#Track> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.oclc.org/NET/aumvco.owl#Track> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#Action> .
+<http://purl.oclc.org/NET/aumvco.owl#Track> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#Fact> .
+<http://purl.oclc.org/NET/aumvco.owl#Track> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#IPEntity> .
+<http://purl.oclc.org/NET/aumvco.owl#Track> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#Permission> .
+<http://purl.oclc.org/NET/aumvco.owl#Track> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#UseData> .
+<http://purl.oclc.org/NET/aumvco.owl#Track> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#User> .
+<http://purl.oclc.org/NET/aumvco.owl#Track> <http://www.w3.org/2000/01/rdf-schema#comment> "A track of a multi-track audio IP Entity that may contain another IP Entity." .
+<http://purl.oclc.org/NET/aumvco.owl#Track> <http://www.w3.org/2002/07/owl#versionInfo> "testing" .
+# 
+# http://purl.oclc.org/NET/mvco.owl#Action
+# 
+# http://purl.oclc.org/NET/mvco.owl#CreateWork
+# 
+# http://purl.oclc.org/NET/mvco.owl#Distribute
+# 
+# http://purl.oclc.org/NET/mvco.owl#Fact
+# 
+# http://purl.oclc.org/NET/mvco.owl#IPEntity
+# 
+# http://purl.oclc.org/NET/mvco.owl#Permission
+# 
+# http://purl.oclc.org/NET/mvco.owl#UseData
+# 
+# http://purl.oclc.org/NET/mvco.owl#User
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

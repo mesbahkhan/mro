@@ -1,0 +1,283 @@
+[ {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "AuMVCO. Media Value Chain Ontology Audio Extension"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#Interval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A temporal entity defined by a start end end point."
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Timeline"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Track"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Action"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Fact"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#IPEntity"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Permission"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#UseData"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#User"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#Reuse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Action of using an IP Entity for the creation of a composite IP Entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Action"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#CreateWork"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Distribute"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#Segment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A specified part of a time-based IP Entity (a meronym of IP Entity)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#IPEntity"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#Timeline",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents a linear and coherent piece of time - can be either abstract (such as the one behind a score) or concrete (such as a signal time line)."
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Track"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Action"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#IPEntity"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Permission"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#UseData"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#User"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#Track",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A track of a multi-track audio IP Entity that may contain another IP Entity."
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Action"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Fact"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#IPEntity"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Permission"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#UseData"
+  }, {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#User"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#contains",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies an IP entity contained in a Segment or Track."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Segment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#IPEntity"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#duration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies the duration of a time interval."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Interval"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#end",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies the beginning of a time interval."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Interval"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#hasSegment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies a Segment of an audio IP Entity."
+  }, {
+    "@value" : "testing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#IPEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Segment"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#segmentOf"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#hasTrack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifes a track of an audio multitrack IP entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#IPEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#interval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates an IP Entity to an interval."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#IPEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Interval"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#isAudio",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies an IP Entity in the audio domain."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#IPEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#onTimeline",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates an interval to the corresponding timeline."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Interval"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Timeline"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#onTrack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Segment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Track"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#segmentOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#start",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies the beginning of a time interval."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Interval"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/aumvco.owl#trackNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies an identifier for a track of a multi-track IP Entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/aumvco.owl#Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "testing"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#duration",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+} ]

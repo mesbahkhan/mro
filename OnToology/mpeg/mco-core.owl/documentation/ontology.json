@@ -1,0 +1,642 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.oclc.org/NET/mvco.owl#IPEntity"
+    }, {
+      "@id" : "urn:mpeg:mpeg21:mco:core:2015#Service"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.oclc.org/NET/mvco.owl#Permission"
+    }, {
+      "@id" : "urn:mpeg:mpeg21:mco:core:2015#Obligation"
+    }, {
+      "@id" : "urn:mpeg:mpeg21:mco:core:2015#Prohibition"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.oclc.org/NET/mvco.owl#User"
+    }, {
+      "@id" : "urn:mpeg:mpeg21:mco:core:2015#Organization"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "urn:mpeg:mpeg21:mco:core:2015#Event"
+    }, {
+      "@id" : "urn:mpeg:mpeg21:mco:core:2015#GenericAction"
+    } ]
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/mvco.owl#Action",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#GenericAction"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/mvco.owl#Fact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/mvco.owl#IPEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/mvco.owl#Permission",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/mvco.owl#User",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/mvco.owl#actedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#actedBy"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/mvco.owl#actedOver",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#actedOver"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/mvco.owl#hasRequired",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#hasRequired"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/mvco.owl#issuedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#issuedBy"
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/mvco.owl#permitsAction",
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#permitsAction"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2006/vcard/ns#VCard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:2002:01-DII-NS#Identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#IPEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "Media Contract Ontology -  Core"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015/2nd-edition"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#ActionEventFact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Fact"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Address",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Party"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Authenticate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Service"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Consume",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Action"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Contract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Deliver",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Service"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#DeonticExpression",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid11"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Describe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Service"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Done",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#ActionEventFact"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#IPEntity"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#FactComposition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Fact"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#FactIntersection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#FactComposition"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#FactNegation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#FactComposition"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#FactUnion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#FactComposition"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#GenericAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Identify",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Service"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#InteractWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Service"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Match",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Action"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Obligation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Package",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Service"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Party",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid15"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Post",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Service"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Present",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Service"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Process",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Service"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Prohibition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Provide",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Action"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Service",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Signature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Started",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#ActionEventFact"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Store",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Service"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Text",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#TextualClause"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#TextVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#contractProperty"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#TextualClause",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#TogetherWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Fact"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#Verify",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Service"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#actedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#GenericAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Party"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#actedOver",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Action"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#appliesOver",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "urn:mpeg:mpeg21:mco:core:2015#permitsAction"
+    }, {
+      "@id" : "urn:mpeg:mpeg21:mco:core:2015#actedOver"
+    } ]
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#cancels",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#contractObjectProperty"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#contractObjectProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Contract"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#contractProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Contract"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#deonticProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#encryptedContractPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#factObjectProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#factProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#forbidsAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Prohibition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Action"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#hasCourt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#contractProperty"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#hasFact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#FactComposition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Fact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#factObjectProperty"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#hasGoverningLaw",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#contractProperty"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#hasParty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Party"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#hasRecipient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Provide"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Party"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#hasRequired",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#DeonticExpression"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Fact"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#hasSignatory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#User"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#hasVCard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Party"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2006/vcard/ns#VCard"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#implements",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#DeonticExpression"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#TextualClause"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#isAmendmentOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#contractObjectProperty"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#isCourtJurisdictionExclusive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#contractProperty"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#isHeldBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "urn:mpeg:mpeg21:mco:core:2015#permitsAction"
+    }, {
+      "@id" : "urn:mpeg:mpeg21:mco:core:2015#actedBy"
+    } ]
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#isOnLoan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Provide"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#isSignedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "relation used to identify the signatory of a contract when different from a party"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#User"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#issuedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#DeonticExpression"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Party"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#issuedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#DeonticExpression"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Contract"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#makesTrue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid8"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#ActionEventFact"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#obligatesAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#Obligation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#GenericAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#permitsAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#Permission"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#GenericAction"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#prevailsOver",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#contractObjectProperty"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#supersedes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#contractObjectProperty"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#withIPEntitiesFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#TogetherWith"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#factProperty"
+  } ]
+}, {
+  "@id" : "urn:mpeg:mpeg21:mco:core:2015#withIPEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#TogetherWith"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.oclc.org/NET/mvco.owl#IPEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "urn:mpeg:mpeg21:mco:core:2015#factObjectProperty"
+  } ]
+} ]
