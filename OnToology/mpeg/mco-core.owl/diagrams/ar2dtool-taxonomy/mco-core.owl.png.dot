@@ -1,0 +1,30 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "mco-core:Present" "mco-core:ActionEventFact" "mco-core:Event" "mco-core:Authenticate" "mco-core:Post" "mco-core:Store" "mco-core:Consume" "mco-core:Describe" "mco-core:FactIntersection" "mvco:Fact" "mco-core:Deliver" "mco-core:FactNegation" "mco-core:Process" "mco-core:FactComposition" "mco-core:TogetherWith" "mco-core:Match" "mco-core:Service" "mvco:Action" "mco-core:FactUnion" "mco-core:Verify" "mco-core:Done" "mco-core:Provide" "mco-core:GenericAction" "mco-core:Identify" "mco-core:InteractWith" "mvco:IPEntity" "mco-core:Started" "mco-core:Package" ; /*classes style*/
+	"mco-core:Match" -> "mvco:Action" [ label = "rdfs:subClassOf" ];
+	"mco-core:Describe" -> "mco-core:Service" [ label = "rdfs:subClassOf" ];
+	"mco-core:FactIntersection" -> "mco-core:FactComposition" [ label = "rdfs:subClassOf" ];
+	"mco-core:Package" -> "mco-core:Service" [ label = "rdfs:subClassOf" ];
+	"mco-core:Done" -> "mco-core:ActionEventFact" [ label = "rdfs:subClassOf" ];
+	"mco-core:Deliver" -> "mco-core:Service" [ label = "rdfs:subClassOf" ];
+	"mco-core:Verify" -> "mco-core:Service" [ label = "rdfs:subClassOf" ];
+	"mco-core:Authenticate" -> "mco-core:Service" [ label = "rdfs:subClassOf" ];
+	"mco-core:InteractWith" -> "mco-core:Service" [ label = "rdfs:subClassOf" ];
+	"mco-core:Store" -> "mco-core:Service" [ label = "rdfs:subClassOf" ];
+	"mco-core:Provide" -> "mvco:Action" [ label = "rdfs:subClassOf" ];
+	"mco-core:Process" -> "mco-core:Service" [ label = "rdfs:subClassOf" ];
+	"mco-core:Started" -> "mco-core:ActionEventFact" [ label = "rdfs:subClassOf" ];
+	"mco-core:Identify" -> "mco-core:Service" [ label = "rdfs:subClassOf" ];
+	"mco-core:Post" -> "mco-core:Service" [ label = "rdfs:subClassOf" ];
+	"mco-core:TogetherWith" -> "mvco:Fact" [ label = "rdfs:subClassOf" ];
+	"mco-core:FactNegation" -> "mco-core:FactComposition" [ label = "rdfs:subClassOf" ];
+	"mco-core:Event" -> "mvco:IPEntity" [ label = "rdfs:subClassOf" ];
+	"mco-core:FactUnion" -> "mco-core:FactComposition" [ label = "rdfs:subClassOf" ];
+	"mco-core:Consume" -> "mvco:Action" [ label = "rdfs:subClassOf" ];
+	"mco-core:FactComposition" -> "mvco:Fact" [ label = "rdfs:subClassOf" ];
+	"mvco:Action" -> "mco-core:GenericAction" [ label = "rdfs:subClassOf" ];
+	"mco-core:Present" -> "mco-core:Service" [ label = "rdfs:subClassOf" ];
+	"mco-core:ActionEventFact" -> "mvco:Fact" [ label = "rdfs:subClassOf" ];
+
+}
